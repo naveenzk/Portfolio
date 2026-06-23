@@ -103,7 +103,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen lg:h-screen flex items-center justify-center overflow-hidden bg-[#0a0414]"
+      className="relative min-h-screen lg:h-screen flex items-center justify-center overflow-hidden bg-[#0a0414] pt-16"
     >
       <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-700/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-56 h-56 md:w-80 md:h-80 bg-fuchsia-700/12 rounded-full blur-3xl pointer-events-none" />
