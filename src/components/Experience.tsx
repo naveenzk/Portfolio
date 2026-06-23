@@ -9,7 +9,7 @@ const experiences = [
     period: '2024 – Present',
     type: 'Freelance',
     location: 'Remote',
-    color: 'from-indigo-500 to-violet-600',
+    color: 'from-purple-500 to-fuchsia-600',
     description: 'Delivering end-to-end software solutions for clients across industries. Specializing in enterprise applications, AI automation, and SaaS development.',
     achievements: [
       'Built and deployed production ERP system (Regent Packages) serving enterprise clients',
@@ -24,7 +24,7 @@ const experiences = [
     period: '2022 – 2024',
     type: 'Full-time',
     location: 'On-site / Hybrid',
-    color: 'from-violet-500 to-sky-600',
+    color: 'from-fuchsia-500 to-violet-600',
     description: 'Led backend development for multiple client projects, focusing on Laravel-based systems and database architecture for B2B applications.',
     achievements: [
       'Architected multi-tenant SaaS platform with role-based access control',
@@ -39,7 +39,7 @@ const experiences = [
     period: '2021 – 2022',
     type: 'Full-time',
     location: 'On-site',
-    color: 'from-sky-500 to-emerald-600',
+    color: 'from-violet-500 to-purple-600',
     description: 'Started professional career building dynamic web applications and learning production development practices under senior mentorship.',
     achievements: [
       'Developed 10+ client websites and web applications from scratch',
@@ -54,9 +54,9 @@ export default function Experience() {
   const [ref, inView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="experience" className="py-24 bg-[#030712] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(56,189,248,0.05)_0%,transparent_70%)] pointer-events-none" />
+    <section id="experience" className="py-24 bg-[#0a0414] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(167,139,250,0.06)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-6" ref={ref}>
         <motion.div
@@ -65,7 +65,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sky-400 text-sm font-semibold tracking-widest uppercase mb-3 block">Work History</span>
+          <span className="text-violet-400 text-sm font-semibold tracking-widest uppercase mb-3 block">Work History</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Professional <span className="gradient-text">Experience</span>
           </h2>
@@ -75,7 +75,7 @@ export default function Experience() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500 via-violet-500 to-sky-500 hidden md:block" />
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-violet-500 hidden md:block" />
 
           <div className="space-y-8">
             {experiences.map((exp, i) => (
@@ -86,11 +86,11 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: i * 0.15 }}
                 className="relative md:pl-20"
               >
-                <div className={`absolute left-5 top-6 w-6 h-6 rounded-full bg-gradient-to-br ${exp.color} border-2 border-slate-900 hidden md:flex items-center justify-center`}>
+                <div className={`absolute left-5 top-6 w-6 h-6 rounded-full bg-gradient-to-br ${exp.color} border-2 border-[#0a0414] hidden md:flex items-center justify-center`}>
                   <Briefcase size={10} className="text-white" />
                 </div>
 
-                <div className="glass glass-hover rounded-2xl p-6 md:p-8 border border-slate-700/30">
+                <div className="glass glass-hover rounded-2xl p-6 md:p-8 border border-purple-800/20">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
@@ -98,7 +98,7 @@ export default function Experience() {
                         <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">{exp.type}</span>
                       </div>
                       <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                      <p className="text-indigo-400 font-semibold">{exp.company}</p>
+                      <p className="text-purple-400 font-semibold">{exp.company}</p>
                     </div>
                     <div className="flex flex-col gap-1 text-sm text-slate-500 md:text-right">
                       <div className="flex items-center gap-1.5 md:justify-end">
@@ -117,7 +117,7 @@ export default function Experience() {
                   <div className="grid sm:grid-cols-2 gap-2.5">
                     {exp.achievements.map((achievement) => (
                       <div key={achievement} className="flex items-start gap-2.5">
-                        <CheckCircle size={14} className="text-indigo-400 mt-0.5 flex-shrink-0" />
+                        <CheckCircle size={14} className="text-purple-400 mt-0.5 flex-shrink-0" />
                         <span className="text-slate-400 text-xs leading-relaxed">{achievement}</span>
                       </div>
                     ))}

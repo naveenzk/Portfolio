@@ -8,7 +8,7 @@ const testimonials = [
     role: 'CEO, Regent Packages',
     avatar: 'AR',
     rating: 5,
-    color: 'from-indigo-500 to-violet-600',
+    color: 'from-purple-500 to-fuchsia-600',
     text: 'The ERP system built for us completely transformed our operations. What used to take our team hours now runs automatically. The attention to detail and understanding of our business processes was exceptional.',
   },
   {
@@ -16,23 +16,23 @@ const testimonials = [
     role: 'Founder, AutomateFlow',
     avatar: 'SM',
     rating: 5,
-    color: 'from-violet-500 to-sky-600',
-    text: 'Working with this developer on our AI automation workflows was a game-changer. They didn\'t just write code — they understood our business logic and built intelligent systems that actually work in production.',
+    color: 'from-fuchsia-500 to-violet-600',
+    text: "Working with this developer on our AI automation workflows was a game-changer. They didn't just write code — they understood our business logic and built intelligent systems that actually work in production.",
   },
   {
     name: 'Marcus Chen',
     role: 'CTO, TechVentures Ltd',
     avatar: 'MC',
     rating: 5,
-    color: 'from-sky-500 to-emerald-600',
-    text: 'Exceptional backend architecture and API design. The system handles our peak traffic without breaking a sweat. Code quality is top-notch — the kind you\'d expect from a senior engineer.',
+    color: 'from-violet-500 to-purple-600',
+    text: "Exceptional backend architecture and API design. The system handles our peak traffic without breaking a sweat. Code quality is top-notch — the kind you'd expect from a senior engineer.",
   },
   {
     name: 'Fatima Hassan',
     role: 'Product Manager, SaaS Startup',
     avatar: 'FH',
     rating: 5,
-    color: 'from-emerald-500 to-amber-600',
+    color: 'from-purple-600 to-pink-600',
     text: 'Delivered the multi-tenant platform ahead of schedule with full test coverage. Communication was excellent throughout. Truly understood the product vision and made smart technical decisions independently.',
   },
 ];
@@ -41,9 +41,9 @@ export default function Testimonials() {
   const [ref, inView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="testimonials" className="py-24 bg-[#03091a] relative overflow-hidden">
+    <section id="testimonials" className="py-24 bg-[#080212] relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.05)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.06)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
@@ -71,7 +71,7 @@ export default function Testimonials() {
               className="glass glass-hover rounded-2xl p-8 group"
             >
               <div className="flex items-start justify-between mb-6">
-                <Quote size={28} className="text-indigo-500/50" />
+                <Quote size={28} className="text-purple-500/50" />
                 <div className="flex gap-0.5">
                   {Array.from({ length: t.rating }).map((_, si) => (
                     <Star key={si} size={14} className="text-amber-400 fill-amber-400" />

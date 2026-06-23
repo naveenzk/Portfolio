@@ -30,9 +30,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#030712] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(99,102,241,0.06)_0%,transparent_70%)] pointer-events-none" />
+    <section id="contact" className="py-24 bg-[#0a0414] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.07)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
@@ -41,7 +41,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-3 block">Get In Touch</span>
+          <span className="text-purple-400 text-sm font-semibold tracking-widest uppercase mb-3 block">Get In Touch</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Let's Build Something <span className="gradient-text">Together</span>
           </h2>
@@ -51,7 +51,6 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-10">
-          {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -67,14 +66,14 @@ export default function Contact() {
               <div className="space-y-4">
                 {contactInfo.map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center flex-shrink-0">
-                      <item.icon size={15} className="text-indigo-400" />
+                    <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon size={15} className="text-purple-400" />
                     </div>
                     <div>
                       <div className="text-slate-500 text-xs">{item.label}</div>
                       {item.href ? (
                         <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
-                          className="text-slate-200 text-sm hover:text-indigo-300 transition-colors"
+                          className="text-slate-200 text-sm hover:text-purple-300 transition-colors"
                         >
                           {item.value}
                         </a>
@@ -98,7 +97,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -108,14 +106,14 @@ export default function Contact() {
             <div className="glass rounded-2xl p-8">
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4">
-                    <CheckCircle size={32} className="text-emerald-400" />
+                  <div className="w-16 h-16 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center mb-4">
+                    <CheckCircle size={32} className="text-purple-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
                   <p className="text-slate-400 text-sm">Thanks for reaching out. I'll get back to you within 24 hours.</p>
                   <button
                     onClick={() => setSent(false)}
-                    className="mt-6 text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
+                    className="mt-6 text-purple-400 hover:text-purple-300 text-sm transition-colors"
                   >
                     Send another message
                   </button>
@@ -132,7 +130,7 @@ export default function Contact() {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/30 transition-all"
+                        className="w-full bg-purple-950/20 border border-purple-800/40 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/30 transition-all"
                       />
                     </div>
                     <div>
@@ -144,7 +142,7 @@ export default function Contact() {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        className="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/30 transition-all"
+                        className="w-full bg-purple-950/20 border border-purple-800/40 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/30 transition-all"
                       />
                     </div>
                   </div>
@@ -158,7 +156,7 @@ export default function Contact() {
                       value={form.subject}
                       onChange={handleChange}
                       placeholder="Project inquiry / Freelance work / Partnership"
-                      className="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/30 transition-all"
+                      className="w-full bg-purple-950/20 border border-purple-800/40 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/30 transition-all"
                     />
                   </div>
 
@@ -171,14 +169,14 @@ export default function Contact() {
                       value={form.message}
                       onChange={handleChange}
                       placeholder="Tell me about your project, timeline, and goals..."
-                      className="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/30 transition-all resize-none"
+                      className="w-full bg-purple-950/20 border border-purple-800/40 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/30 transition-all resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold hover:from-indigo-500 hover:to-violet-500 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed glow"
+                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-semibold hover:from-purple-500 hover:to-fuchsia-500 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed glow"
                   >
                     {loading ? (
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

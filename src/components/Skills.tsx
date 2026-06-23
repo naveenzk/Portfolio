@@ -6,8 +6,8 @@ const categories = [
   {
     icon: Server,
     title: 'Backend Development',
-    color: 'from-indigo-500 to-indigo-700',
-    glow: 'rgba(99,102,241,0.3)',
+    color: 'from-purple-500 to-purple-700',
+    glow: 'rgba(139,92,246,0.4)',
     skills: [
       { name: 'Laravel', level: 95 },
       { name: 'PHP', level: 92 },
@@ -20,8 +20,8 @@ const categories = [
   {
     icon: Monitor,
     title: 'Frontend Development',
-    color: 'from-violet-500 to-violet-700',
-    glow: 'rgba(139,92,246,0.3)',
+    color: 'from-fuchsia-500 to-fuchsia-700',
+    glow: 'rgba(232,121,249,0.4)',
     skills: [
       { name: 'React', level: 88 },
       { name: 'TypeScript', level: 85 },
@@ -33,8 +33,8 @@ const categories = [
   {
     icon: Database,
     title: 'Databases',
-    color: 'from-sky-500 to-sky-700',
-    glow: 'rgba(56,189,248,0.3)',
+    color: 'from-violet-500 to-violet-700',
+    glow: 'rgba(167,139,250,0.4)',
     skills: [
       { name: 'MySQL', level: 92 },
       { name: 'SQL Server', level: 85 },
@@ -46,8 +46,8 @@ const categories = [
   {
     icon: Bot,
     title: 'AI & Automation',
-    color: 'from-emerald-500 to-emerald-700',
-    glow: 'rgba(16,185,129,0.3)',
+    color: 'from-purple-600 to-fuchsia-600',
+    glow: 'rgba(192,132,252,0.4)',
     skills: [
       { name: 'AI Agents', level: 82 },
       { name: 'Workflow Automation', level: 88 },
@@ -59,8 +59,8 @@ const categories = [
   {
     icon: Wrench,
     title: 'Tools & Technologies',
-    color: 'from-orange-500 to-orange-700',
-    glow: 'rgba(249,115,22,0.3)',
+    color: 'from-pink-500 to-purple-600',
+    glow: 'rgba(236,72,153,0.3)',
     skills: [
       { name: 'Git & GitHub', level: 95 },
       { name: 'Docker', level: 78 },
@@ -82,7 +82,7 @@ function SkillBar({ name, level, delay, inView }: { name: string; level: number;
           initial={{ width: 0 }}
           animate={inView ? { width: `${level}%` } : { width: 0 }}
           transition={{ duration: 1, delay, ease: 'easeOut' }}
-          className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500"
+          className="h-full rounded-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-violet-400"
         />
       </div>
     </div>
@@ -93,9 +93,9 @@ export default function Skills() {
   const [ref, inView] = useInView({ threshold: 0.05 });
 
   return (
-    <section id="skills" className="py-24 bg-[#030712] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.05)_0%,transparent_70%)] pointer-events-none" />
+    <section id="skills" className="py-24 bg-[#0a0414] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(168,85,247,0.06)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
@@ -104,7 +104,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-violet-400 text-sm font-semibold tracking-widest uppercase mb-3 block">What I Work With</span>
+          <span className="text-fuchsia-400 text-sm font-semibold tracking-widest uppercase mb-3 block">What I Work With</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Skills &amp; <span className="gradient-text">Technologies</span>
           </h2>

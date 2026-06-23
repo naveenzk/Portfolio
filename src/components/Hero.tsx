@@ -23,7 +23,7 @@ function ParticleCanvas() {
 
     let animId: number;
     const particles: Particle[] = [];
-    const colors = ['rgba(99,102,241,', 'rgba(139,92,246,', 'rgba(56,189,248,', 'rgba(192,132,252,'];
+    const colors = ['rgba(139,92,246,', 'rgba(168,85,247,', 'rgba(232,121,249,', 'rgba(192,132,252,'];
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
@@ -58,7 +58,6 @@ function ParticleCanvas() {
         ctx.fill();
       });
 
-      // Draw connections
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -68,7 +67,7 @@ function ParticleCanvas() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(99,102,241,${0.15 * (1 - dist / 100)})`;
+            ctx.strokeStyle = `rgba(139,92,246,${0.15 * (1 - dist / 100)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -102,12 +101,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030712]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0414]"
     >
       {/* Background glow blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-900/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-700/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-fuchsia-700/12 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/8 rounded-full blur-3xl pointer-events-none" />
 
       <ParticleCanvas />
 
@@ -119,9 +118,9 @@ export default function Hero() {
           animate="show"
           className="flex-1 text-center lg:text-left"
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-indigo-500/30 text-indigo-300 text-sm font-medium mb-6">
-            <Sparkles size={14} className="text-indigo-400" />
-            Available for Freelance & Full-time Roles
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-purple-500/30 text-purple-300 text-sm font-medium mb-6">
+            <Sparkles size={14} className="text-purple-400" />
+            Available for Freelance &amp; Full-time Roles
           </motion.div>
 
           <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-4">
@@ -143,14 +142,14 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-4 justify-center lg:justify-start mb-10">
             <a
               href="#projects"
-              className="px-7 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold hover:from-indigo-500 hover:to-violet-500 transition-all duration-200 glow hover:scale-105 flex items-center gap-2"
+              className="px-7 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-semibold hover:from-purple-500 hover:to-fuchsia-500 transition-all duration-200 glow hover:scale-105 flex items-center gap-2"
             >
               View Projects
               <ArrowDown size={16} />
             </a>
             <a
               href="/resume.pdf"
-              className="px-7 py-3 rounded-xl glass border border-indigo-500/40 text-slate-200 font-semibold hover:border-indigo-400 hover:text-white transition-all duration-200 flex items-center gap-2"
+              className="px-7 py-3 rounded-xl glass border border-purple-500/40 text-slate-200 font-semibold hover:border-purple-400 hover:text-white transition-all duration-200 flex items-center gap-2"
             >
               <Download size={16} />
               Download Resume
@@ -165,13 +164,13 @@ export default function Hero() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="flex items-center gap-5 justify-center lg:justify-start">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-indigo-400 transition-colors">
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-purple-400 transition-colors">
               <GitBranch size={22} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-indigo-400 transition-colors">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-purple-400 transition-colors">
               <Link2 size={22} />
             </a>
-            <a href="mailto:support@iisol.pk" className="text-slate-500 hover:text-indigo-400 transition-colors">
+            <a href="mailto:support@iisol.pk" className="text-slate-500 hover:text-purple-400 transition-colors">
               <Mail size={22} />
             </a>
             <div className="h-4 w-px bg-slate-700" />
@@ -190,15 +189,13 @@ export default function Hero() {
           className="flex-shrink-0"
         >
           <div className="relative w-72 h-72 lg:w-80 lg:h-80">
-            {/* Spinning rings */}
-            <div className="absolute inset-0 rounded-full border border-indigo-500/20 animate-spin" style={{ animationDuration: '20s' }} />
-            <div className="absolute inset-4 rounded-full border border-violet-500/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
-            <div className="absolute inset-8 rounded-full border border-sky-500/20 animate-spin" style={{ animationDuration: '25s' }} />
+            <div className="absolute inset-0 rounded-full border border-purple-500/20 animate-spin" style={{ animationDuration: '20s' }} />
+            <div className="absolute inset-4 rounded-full border border-fuchsia-500/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+            <div className="absolute inset-8 rounded-full border border-purple-400/15 animate-spin" style={{ animationDuration: '25s' }} />
 
-            {/* Avatar container */}
-            <div className="absolute inset-10 rounded-full bg-gradient-to-br from-indigo-600 via-violet-600 to-sky-600 p-1 animate-pulse-glow">
-              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center rounded-full">
+            <div className="absolute inset-10 rounded-full bg-gradient-to-br from-purple-600 via-fuchsia-600 to-purple-800 p-1 animate-pulse-glow">
+              <div className="w-full h-full rounded-full bg-[#0a0414] flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-br from-purple-950/80 to-[#0a0414] flex items-center justify-center rounded-full">
                   <div className="text-center">
                     <div className="text-6xl font-bold gradient-text">SD</div>
                     <div className="text-xs text-slate-500 mt-1">Software Developer</div>
@@ -207,38 +204,36 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating badges */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-2 -right-2 glass rounded-xl px-3 py-2 border border-indigo-500/30"
+              className="absolute -top-2 -right-2 glass rounded-xl px-3 py-2 border border-purple-500/30"
             >
-              <div className="text-xs text-indigo-300 font-semibold">Laravel</div>
+              <div className="text-xs text-purple-300 font-semibold">Laravel</div>
               <div className="text-xs text-slate-500">Backend</div>
             </motion.div>
 
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute -bottom-2 -left-4 glass rounded-xl px-3 py-2 border border-violet-500/30"
+              className="absolute -bottom-2 -left-4 glass rounded-xl px-3 py-2 border border-fuchsia-500/30"
             >
-              <div className="text-xs text-violet-300 font-semibold">AI Automation</div>
+              <div className="text-xs text-fuchsia-300 font-semibold">AI Automation</div>
               <div className="text-xs text-slate-500">n8n • AI Agents</div>
             </motion.div>
 
             <motion.div
               animate={{ x: [0, -6, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute top-1/2 -left-8 glass rounded-xl px-3 py-2 border border-sky-500/30"
+              className="absolute top-1/2 -left-8 glass rounded-xl px-3 py-2 border border-purple-400/30"
             >
-              <div className="text-xs text-sky-300 font-semibold">React</div>
+              <div className="text-xs text-purple-300 font-semibold">React</div>
               <div className="text-xs text-slate-500">Frontend</div>
             </motion.div>
           </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

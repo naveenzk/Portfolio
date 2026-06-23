@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 
 const stats = [
-  { value: 25, suffix: '+', label: 'Projects Completed', color: 'from-indigo-400 to-violet-400' },
-  { value: 15, suffix: '+', label: 'Technologies Mastered', color: 'from-violet-400 to-sky-400' },
-  { value: 50, suffix: '+', label: 'APIs Developed', color: 'from-sky-400 to-emerald-400' },
-  { value: 10, suffix: '+', label: 'Databases Designed', color: 'from-emerald-400 to-amber-400' },
-  { value: 3000, suffix: '+', label: 'Hours of Development', color: 'from-amber-400 to-rose-400' },
+  { value: 25, suffix: '+', label: 'Projects Completed', color: 'from-purple-400 to-fuchsia-400' },
+  { value: 15, suffix: '+', label: 'Technologies Mastered', color: 'from-fuchsia-400 to-violet-400' },
+  { value: 50, suffix: '+', label: 'APIs Developed', color: 'from-violet-400 to-purple-400' },
+  { value: 10, suffix: '+', label: 'Databases Designed', color: 'from-purple-400 to-pink-400' },
+  { value: 3000, suffix: '+', label: 'Hours of Development', color: 'from-pink-400 to-fuchsia-400' },
 ];
 
 function Counter({ value, suffix, inView }: { value: number; suffix: string; inView: boolean }) {
@@ -34,20 +34,16 @@ function Counter({ value, suffix, inView }: { value: number; suffix: string; inV
     return () => clearInterval(timer);
   }, [inView, value]);
 
-  return (
-    <span>
-      {count.toLocaleString()}{suffix}
-    </span>
-  );
+  return <span>{count.toLocaleString()}{suffix}</span>;
 }
 
 export default function Stats() {
   const [ref, inView] = useInView({ threshold: 0.2 });
 
   return (
-    <section className="py-20 bg-[#030712] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.04)_0%,transparent_70%)] pointer-events-none" />
+    <section className="py-20 bg-[#0a0414] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.05)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
@@ -56,7 +52,7 @@ export default function Stats() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3 block">By The Numbers</span>
+          <span className="text-purple-400 text-sm font-semibold tracking-widest uppercase mb-3 block">By The Numbers</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             Achievements &amp; <span className="gradient-text">Impact</span>
           </h2>

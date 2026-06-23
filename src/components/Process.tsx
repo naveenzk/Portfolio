@@ -8,48 +8,48 @@ const steps = [
     step: '01',
     title: 'Discover',
     desc: 'Deep-dive into requirements, stakeholder goals, and technical constraints to fully understand the problem space before writing a single line of code.',
-    color: 'from-indigo-500 to-indigo-700',
-    glow: 'rgba(99,102,241,0.4)',
+    color: 'from-purple-500 to-purple-700',
+    glow: 'rgba(139,92,246,0.45)',
   },
   {
     icon: Pencil,
     step: '02',
     title: 'Design',
     desc: 'Architect the system — database schema, API contracts, component structure, and data flow — ensuring scalability and maintainability from day one.',
-    color: 'from-violet-500 to-violet-700',
-    glow: 'rgba(139,92,246,0.4)',
+    color: 'from-fuchsia-500 to-fuchsia-700',
+    glow: 'rgba(232,121,249,0.4)',
   },
   {
     icon: Code2,
     step: '03',
     title: 'Develop',
     desc: 'Write clean, documented, reusable code following SOLID principles and framework best practices. Feature branches, meaningful commits, code reviews.',
-    color: 'from-sky-500 to-sky-700',
-    glow: 'rgba(56,189,248,0.4)',
+    color: 'from-violet-500 to-violet-700',
+    glow: 'rgba(167,139,250,0.4)',
   },
   {
     icon: FlaskConical,
     step: '04',
     title: 'Test',
     desc: 'Comprehensive testing — unit, integration, edge cases. Manual QA for UX. Performance profiling and security review before any release.',
-    color: 'from-amber-500 to-amber-700',
-    glow: 'rgba(245,158,11,0.4)',
+    color: 'from-purple-600 to-fuchsia-600',
+    glow: 'rgba(192,132,252,0.4)',
   },
   {
     icon: Rocket,
     step: '05',
     title: 'Deploy',
     desc: 'Smooth deployments with zero-downtime strategies, CI/CD pipelines, environment configuration, and rollback plans in place.',
-    color: 'from-emerald-500 to-emerald-700',
-    glow: 'rgba(16,185,129,0.4)',
+    color: 'from-pink-500 to-purple-600',
+    glow: 'rgba(236,72,153,0.35)',
   },
   {
     icon: TrendingUp,
     step: '06',
     title: 'Optimize',
     desc: 'Monitor performance, gather user feedback, optimize bottlenecks, and iterate continuously. Software is never done — it evolves.',
-    color: 'from-rose-500 to-rose-700',
-    glow: 'rgba(244,63,94,0.4)',
+    color: 'from-violet-600 to-purple-800',
+    glow: 'rgba(124,58,237,0.4)',
   },
 ];
 
@@ -57,9 +57,9 @@ export default function Process() {
   const [ref, inView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="process" className="py-24 bg-[#03091a] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.04)_0%,transparent_70%)] pointer-events-none" />
+    <section id="process" className="py-24 bg-[#080212] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.05)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
@@ -68,7 +68,7 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-emerald-400 text-sm font-semibold tracking-widest uppercase mb-3 block">How I Work</span>
+          <span className="text-fuchsia-400 text-sm font-semibold tracking-widest uppercase mb-3 block">How I Work</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Development <span className="gradient-text">Process</span>
           </h2>
@@ -86,7 +86,7 @@ export default function Process() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="glass glass-hover rounded-2xl p-7 group relative overflow-hidden"
             >
-              <div className="absolute top-4 right-4 text-6xl font-black text-slate-800/50 select-none group-hover:text-slate-700/50 transition-colors">
+              <div className="absolute top-4 right-4 text-6xl font-black text-purple-950/60 select-none group-hover:text-purple-900/60 transition-colors">
                 {step.step}
               </div>
 
