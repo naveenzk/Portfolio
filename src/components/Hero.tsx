@@ -110,7 +110,7 @@ export default function Hero() {
 
       <ParticleCanvas />
 
-      <div className="relative z-10 w-full px-8 sm:px-12 lg:px-20 py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+      <div className="relative z-10 w-full px-4 sm:px-12 lg:px-20 py-12 sm:py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         {/* Text content */}
         <motion.div
           variants={stagger}
@@ -118,9 +118,9 @@ export default function Hero() {
           animate="show"
           className="flex-1 text-center lg:text-left"
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-purple-500/30 text-purple-300 text-xs sm:text-sm font-medium mb-3 sm:mb-5">
-            <Sparkles size={13} className="text-purple-400" />
-            Available for Freelance Services &amp; Remote Roles
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-purple-500/30 text-purple-300 text-xs sm:text-sm font-medium mb-3 sm:mb-5 max-w-full overflow-hidden">
+            <Sparkles size={13} className="text-purple-400 flex-shrink-0" />
+            <span className="truncate min-w-0">Available for Freelance Services &amp; Remote Roles</span>
           </motion.div>
 
           <motion.h1 variants={fadeUp} className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-3">
@@ -162,7 +162,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="flex items-center gap-4 sm:gap-5 justify-center lg:justify-start">
+          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-4 sm:gap-5 justify-center lg:justify-start mb-6">
             <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-purple-400 transition-colors">
               <GitBranch size={20} />
             </a>
