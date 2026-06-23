@@ -22,34 +22,35 @@ export default function About() {
   const [ref, inView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="about" className="py-24 bg-[#080212] relative overflow-hidden">
+    <section id="about" className="py-16 md:py-24 bg-[#080212] relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.06)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <span className="text-purple-400 text-sm font-semibold tracking-widest uppercase mb-3 block">Who I Am</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <span className="text-purple-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Who I Am</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
             A software developer driven by curiosity, precision, and the desire to build things that matter.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          {/* Left — story + values */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">My Journey</h3>
-            <div className="space-y-4 text-slate-400 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-5">My Journey</h3>
+            <div className="space-y-4 text-slate-400 leading-relaxed text-sm sm:text-base">
               <p>
                 I'm a software developer specializing in <span className="text-purple-300 font-medium">Backend Development</span>, <span className="text-fuchsia-300 font-medium">AI Automation</span>, and <span className="text-violet-300 font-medium">Full-Stack SaaS Applications</span>. My journey started with a fascination for how software can transform business operations and solve complex real-world challenges.
               </p>
@@ -61,47 +62,48 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-7 sm:mt-8">
               {values.map((v, i) => (
                 <motion.div
                   key={v.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
-                  className="glass glass-hover rounded-xl p-4"
+                  className="glass glass-hover rounded-xl p-3 sm:p-4"
                 >
-                  <v.icon size={20} className="text-purple-400 mb-2" />
-                  <div className="text-white font-semibold text-sm mb-1">{v.title}</div>
+                  <v.icon size={18} className="text-purple-400 mb-2" />
+                  <div className="text-white font-semibold text-xs sm:text-sm mb-1">{v.title}</div>
                   <div className="text-slate-500 text-xs leading-relaxed">{v.desc}</div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
+          {/* Right — timeline */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-8">Development Timeline</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">Development Timeline</h3>
             <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-violet-500" />
-              <div className="space-y-6">
+              <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-violet-500" />
+              <div className="space-y-4 sm:space-y-6">
                 {timeline.map((item, i) => (
                   <motion.div
                     key={item.year}
                     initial={{ opacity: 0, x: 20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-                    className="relative flex gap-6 pl-16"
+                    className="relative flex gap-4 pl-12 sm:pl-14"
                   >
-                    <div className="absolute left-3.5 top-1.5 w-5 h-5 rounded-full bg-gradient-to-br from-purple-500 to-fuchsia-600 border-2 border-[#080212] flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white" />
+                    <div className="absolute left-[14px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-purple-500 to-fuchsia-600 border-2 border-[#080212] flex items-center justify-center">
+                      <div className="w-1 h-1 rounded-full bg-white" />
                     </div>
-                    <div className="glass rounded-xl p-4 flex-1 glass-hover">
-                      <div className="flex items-center gap-3 mb-1">
-                        <span className="text-purple-400 text-sm font-bold">{item.year}</span>
-                        <span className="text-white font-semibold text-sm">{item.title}</span>
+                    <div className="glass rounded-xl p-3 sm:p-4 flex-1 glass-hover">
+                      <div className="flex flex-wrap items-center gap-2 mb-1">
+                        <span className="text-purple-400 text-xs sm:text-sm font-bold">{item.year}</span>
+                        <span className="text-white font-semibold text-xs sm:text-sm">{item.title}</span>
                       </div>
                       <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
                     </div>
