@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 
 const stats = [
-  { value: 25, suffix: '+', label: 'Projects Completed', color: 'from-purple-400 to-fuchsia-400' },
+  { value: 10, suffix: '+', label: 'Projects Completed', color: 'from-purple-400 to-fuchsia-400' },
   { value: 15, suffix: '+', label: 'Technologies Mastered', color: 'from-fuchsia-400 to-violet-400' },
   { value: 50, suffix: '+', label: 'APIs Developed', color: 'from-violet-400 to-purple-400' },
-  { value: 10, suffix: '+', label: 'Databases Designed', color: 'from-purple-400 to-pink-400' },
+  { value: 12, suffix: '+', label: 'Databases Designed', color: 'from-purple-400 to-pink-400' },
   { value: 3000, suffix: '+', label: 'Hours of Development', color: 'from-pink-400 to-fuchsia-400' },
 ];
 
@@ -69,7 +69,7 @@ export default function Stats() {
               className={`glass glass-hover rounded-2xl p-4 sm:p-6 text-center group ${
                 // Center the 5th card when it's alone on the last row in 2-col
                 i === 4 ? 'col-span-2 sm:col-span-1' : ''
-              }`}
+                }`}
             >
               <div className={`text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                 <Counter value={stat.value} suffix={stat.suffix} inView={inView} />

@@ -29,13 +29,13 @@ export default function Navbar() {
         scrolled ? 'glass shadow-lg shadow-purple-950/30' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="w-full px-6 py-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2 group">
           <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500 to-fuchsia-600 flex items-center justify-center glow-sm group-hover:scale-110 transition-transform">
             <Code2 size={18} className="text-white" />
           </div>
           <span className="text-white font-bold text-lg tracking-tight">
-            Dev<span className="gradient-text">Portfolio</span>
+            Naveen<span className="gradient-text">Zaman</span>
           </span>
         </a>
 

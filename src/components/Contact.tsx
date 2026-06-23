@@ -4,9 +4,9 @@ import { useInView } from '../hooks/useInView';
 import { Mail, GitBranch, Link2, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'support@iisol.pk', href: 'mailto:support@iisol.pk' },
-  { icon: GitBranch, label: 'GitHub', value: 'github.com/yourhandle', href: 'https://github.com' },
-  { icon: Link2, label: 'LinkedIn', value: 'linkedin.com/in/yourprofile', href: 'https://linkedin.com' },
+  { icon: Mail, label: 'Email', value: 'naveen.zkhan@gmail.com', href: 'mailto:naveen.zkhan@gmail.com' },
+  { icon: GitBranch, label: 'GitHub', value: 'github.com/naveenzk', href: 'https://github.com/naveenzk' },
+  { icon: Link2, label: 'LinkedIn', value: 'linkedin.com/in/naveenzamankhan', href: 'https://linkedin.com/in/naveenzamankhan' },
   { icon: MapPin, label: 'Location', value: 'Pakistan — Available Worldwide', href: null },
 ];
 
@@ -23,10 +23,26 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 1500));
-    setLoading(false);
-    setSent(true);
-    setForm({ name: '', email: '', subject: '', message: '' });
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/naveen.zkhan@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+          _captcha: 'false',
+        }),
+      });
+      const data = await res.json();
+      if (data.success === 'true' || data.success === true) {
+        setSent(true);
+        setForm({ name: '', email: '', subject: '', message: '' });
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -96,7 +112,7 @@ export default function Contact() {
                 <span className="text-emerald-400 font-semibold text-sm">Available for Work</span>
               </div>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Currently open to freelance contracts, full-time roles, and exciting product collaborations. Response time: within 24 hours.
+                Currently open to freelance contracts, full-time remote roles, and exciting product collaborations. Response time: within 24 hours.
               </p>
             </div>
           </motion.div>

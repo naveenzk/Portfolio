@@ -103,14 +103,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0414]"
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-[#0a0414]"
     >
       <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-700/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-56 h-56 md:w-80 md:h-80 bg-fuchsia-700/12 rounded-full blur-3xl pointer-events-none" />
 
       <ParticleCanvas />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-28 lg:py-24 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 w-full">
+      <div className="relative z-10 w-full px-8 sm:px-12 lg:px-20 py-16 lg:py-0 flex flex-col lg:flex-row items-center gap-6 lg:gap-16 max-h-screen overflow-y-auto">
         {/* Text content */}
         <motion.div
           variants={stagger}
@@ -118,12 +118,12 @@ export default function Hero() {
           animate="show"
           className="flex-1 text-center lg:text-left"
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-purple-500/30 text-purple-300 text-xs sm:text-sm font-medium mb-5 sm:mb-6">
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-purple-500/30 text-purple-300 text-xs sm:text-sm font-medium mb-3 sm:mb-5">
             <Sparkles size={13} className="text-purple-400" />
-            Available for Freelance &amp; Full-time Roles
+            Available for Freelance Services &amp; Remote Roles
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-4">
+          <motion.h1 variants={fadeUp} className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-3">
             Building{' '}
             <span className="gradient-text">Scalable Software,</span>
             <br />
@@ -133,12 +133,12 @@ export default function Hero() {
             {' '}Digital Solutions
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="text-slate-400 text-base sm:text-lg leading-relaxed mb-7 sm:mb-8 max-w-xl mx-auto lg:mx-0">
+          <motion.p variants={fadeUp} className="text-slate-400 text-sm sm:text-base lg:text-lg leading-relaxed mb-5 sm:mb-7 max-w-xl mx-auto lg:mx-0">
             I'm a Software Developer passionate about backend systems, AI-driven automation, and
             building scalable SaaS applications that solve real-world problems.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 justify-center lg:justify-start mb-8 sm:mb-10">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 justify-center lg:justify-start mb-5 sm:mb-7">
             <a
               href="#projects"
               className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-semibold hover:from-purple-500 hover:to-fuchsia-500 transition-all duration-200 glow hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
@@ -197,7 +197,7 @@ export default function Hero() {
             <div className="absolute inset-10 rounded-full bg-gradient-to-br from-purple-600 via-fuchsia-600 to-purple-800 p-1 animate-pulse-glow">
               <div className="w-full h-full rounded-full bg-[#0a0414] flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-4xl lg:text-6xl font-bold gradient-text">SD</div>
+                  <div className="text-4xl lg:text-6xl font-bold gradient-text">NZ</div>
                   <div className="text-xs text-slate-500 mt-1 hidden lg:block">Software Developer</div>
                 </div>
               </div>
