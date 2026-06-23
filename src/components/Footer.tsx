@@ -1,4 +1,4 @@
-import { GitBranch, Link2, Mail, Code2, Heart } from 'lucide-react';
+import { GitBranch, Link2, Mail, Code2 } from 'lucide-react';
 
 export default function Footer() {
   const year = new Date().getFullYear();
