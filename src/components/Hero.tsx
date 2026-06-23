@@ -103,14 +103,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-[#0a0414]"
+      className="relative min-h-screen lg:h-screen flex items-center justify-center overflow-hidden bg-[#0a0414]"
     >
       <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-700/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-56 h-56 md:w-80 md:h-80 bg-fuchsia-700/12 rounded-full blur-3xl pointer-events-none" />
 
       <ParticleCanvas />
 
-      <div className="relative z-10 w-full px-8 sm:px-12 lg:px-20 py-16 lg:py-0 flex flex-col lg:flex-row items-center gap-6 lg:gap-16 max-h-screen overflow-y-auto">
+      <div className="relative z-10 w-full px-8 sm:px-12 lg:px-20 py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         {/* Text content */}
         <motion.div
           variants={stagger}
